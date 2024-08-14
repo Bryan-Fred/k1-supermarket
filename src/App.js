@@ -50,6 +50,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/homepage" />} />
         <Route path="homepage" element={<Homepage />} />
+        <Route
+          path="/toiletries"
+          element={<ToiletriesPage addToCart={addToCart} cartCount={cartCount} />}
+        />
       </Routes>
     </BrowserRouter>
   );
