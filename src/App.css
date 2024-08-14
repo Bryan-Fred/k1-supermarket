@@ -474,7 +474,7 @@ body {
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
-    padding: 10px 0;
+    padding: 14px 0;
     width: 100%;
     text-align: left;
     transition: color 0.3s ease-in-out;
@@ -606,7 +606,7 @@ body {
   }
 
   .sidebar-bottom p{
-    border-top: 1px solid rgb(109, 109, 109);
+    border-top: 1px solid rgb(82, 82, 82);
     font-size: 12px;
     width: 100%;
     text-align: center;
@@ -615,7 +615,7 @@ body {
   }
 
   .arrow-in-sidebar{
-    margin-left: 20px;
+    margin-left: 90px;
   }
   
 }

@@ -7,6 +7,8 @@ import CartPage from "./pages/CartPage";
 import BreakfastPage from "./pages/BreakfastPage";
 import PastriesPage from "./pages/PastriesPage";
 import GrainsPage from "./pages/GrainsPage";
+import FrozenFoodsPage from "./pages/FrozenFoodsPage";
+import CustomerSupport from "./pages/CustomerSupport";
 
 function App() {
   const [cart, setCart] = useState(() => {
@@ -71,6 +73,8 @@ function App() {
         <Route path="/breakfast" element={<BreakfastPage addToCart={addToCart} cartCount={cartCount} />} />
         <Route path="/pastries" element={<PastriesPage addToCart={addToCart} cartCount={cartCount} />} />
         <Route path="/grains" element={<GrainsPage addToCart={addToCart} cartCount={cartCount} />} />
+        <Route path="/FrozenFoods" element={<FrozenFoodsPage addToCart={addToCart} cartCount={cartCount} />} />
+        <Route path="/support" element={<CustomerSupport/>} />
       </Routes>
     </BrowserRouter>
   );
