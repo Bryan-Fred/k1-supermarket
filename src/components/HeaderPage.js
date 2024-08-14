@@ -106,8 +106,8 @@ const HeaderPage = ({ cartCount, products, setSearchResults }) => {
             <FaInfoCircle className="sidebar-icons" /> About Us
           </a>
           <div className="categories">
-            <a onClick={toggleCategories} href="/">
-              <FaBoxes /> Categories{" "}
+            <a onClick={toggleCategories} href="#">
+              <FaBoxes className="sidebar-icons" /> Categories{" "}
               {isCategoriesVisible ? <FaChevronUp className="arrow-in-sidebar"/> : <FaChevronDown className="arrow-in-sidebar"/>}
             </a>
             <div

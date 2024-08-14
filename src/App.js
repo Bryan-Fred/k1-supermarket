@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import HeaderPage from "./components/HeaderPage";
 import Homepage from "./pages/Homepage";
 import ToiletriesPage from "./pages/ToiletriesPage";
+import CartPage from "./pages/CartPage";
 
 function App() {
   const [cart, setCart] = useState(() => {
@@ -53,6 +54,16 @@ function App() {
         <Route
           path="/toiletries"
           element={<ToiletriesPage addToCart={addToCart} cartCount={cartCount} />}
+        />
+        <Route
+          path="/cart"
+          element={
+            <CartPage
+              cart={cart}
+              updateCartQuantity={updateCartQuantity}
+              removeFromCart={removeFromCart}
+            />
+          }
         />
       </Routes>
     </BrowserRouter>

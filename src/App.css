@@ -437,14 +437,12 @@ body {
     height: 100%;
     width: 250px;
     background-color: #04ad20;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    transition: left 0.2s ease-in-out;
+    transition: left 0.3s ease-in-out;
     z-index: 1000;
-    padding-top: 80px;
   }
   
   .navbar.show {
@@ -482,6 +480,7 @@ body {
     transition: color 0.3s ease-in-out;
     display: flex;
     align-items: center;
+    font-size: 15px;
   }
   
   .navbar a:hover {
@@ -498,6 +497,7 @@ body {
   
   .sidebar-icons {
     display: flex;
+    font-size: 22px;
   }
   
   .categories-list {
@@ -512,7 +512,7 @@ body {
   }
   
   .categories-list a {
-    padding: 10px 0;
+    padding: 7px 0;
     font-size: 14px;
     color: #fff;
     text-transform: capitalize;
@@ -569,7 +569,7 @@ body {
     display: flex;
     flex-direction: row;
     width: 50%;
-    height: 30px;
+    height: 20px;
   }
   
   .social-media a {
@@ -577,7 +577,6 @@ body {
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
-    padding: 15px 0;
     width: 100%;
     text-align: left;
     transition: color 0.3s ease-in-out;
@@ -603,15 +602,16 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 15px;
   }
 
   .sidebar-bottom p{
-    border-top: 1px solid rgb(65, 63, 63);
-    padding-top: 15px;
+    border-top: 1px solid rgb(109, 109, 109);
     font-size: 12px;
     width: 100%;
     text-align: center;
     color: rgb(219, 202, 202);
+    padding-top: 5px;
   }
 
   .arrow-in-sidebar{
