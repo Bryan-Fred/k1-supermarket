@@ -1,21 +1,23 @@
 import React, { useState, useEffect, useRef } from "react";
-import './App.css';
-import HeaderPage from './components/HeaderPage';
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import HeaderPage from "./components/HeaderPage";
+import Homepage from "./pages/Homepage";
+import ToiletriesPage from "./pages/ToiletriesPage";
 
 function App() {
   const [cart, setCart] = useState(() => {
-    const savedCart = localStorage.getItem('cart');
+    const savedCart = localStorage.getItem("cart");
     return savedCart ? JSON.parse(savedCart) : [];
   });
 
   const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
   const addToCart = (product) => {
-    console.log('Product added to cart:', product);
+    console.log("Product added to cart:", product);
     const existingProduct = cart.find((item) => item._id === product._id);
     if (existingProduct) {
       setCart(
@@ -43,9 +45,13 @@ function App() {
   const cartCount = cart.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
-    <div className="App">
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <HeaderPage cartCount={cartCount} setSearchResults={setSearchResults} />
-    </div>
+      <Routes>
+        <Route path="/" element={<Navigate to="/homepage" />} />
+        <Route path="homepage" element={<Homepage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
