@@ -4,6 +4,8 @@ import HeaderPage from "./components/HeaderPage";
 import Homepage from "./pages/Homepage";
 import ToiletriesPage from "./pages/ToiletriesPage";
 import CartPage from "./pages/CartPage";
+import BreakfastPage from "./pages/BreakfastPage";
+import PastriesPage from "./pages/PastriesPage";
 
 function App() {
   const [cart, setCart] = useState(() => {
@@ -65,6 +67,8 @@ function App() {
             />
           }
         />
+        <Route path="/breakfast" element={<BreakfastPage addToCart={addToCart} cartCount={cartCount} />} />
+        <Route path="/pastries" element={<PastriesPage addToCart={addToCart} cartCount={cartCount} />} />
       </Routes>
     </BrowserRouter>
   );
