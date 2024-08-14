@@ -9,6 +9,7 @@ import PastriesPage from "./pages/PastriesPage";
 import GrainsPage from "./pages/GrainsPage";
 import FrozenFoodsPage from "./pages/FrozenFoodsPage";
 import CustomerSupport from "./pages/CustomerSupport";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
   const [cart, setCart] = useState(() => {
@@ -76,6 +77,7 @@ function App() {
         <Route path="/FrozenFoods" element={<FrozenFoodsPage addToCart={addToCart} cartCount={cartCount} />} />
         <Route path="/support" element={<CustomerSupport/>} />
       </Routes>
+      <ScrollToTopButton />
     </BrowserRouter>
   );
 }
