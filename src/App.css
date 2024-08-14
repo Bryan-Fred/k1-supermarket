@@ -515,12 +515,13 @@ body {
   
   .categories-list a {
     padding: 7px 0;
-    font-size: 14px;
+    font-size: 15px;
     color: #fff;
     text-transform: capitalize;
     text-decoration: none;
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
     position: relative;
+    font-family: sans-serif;
   }
   
   .categories-list a::before {
