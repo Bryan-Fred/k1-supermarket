@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import React, { useState, useEffect, useRef } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import HeaderPage from "./components/HeaderPage";
@@ -78,6 +79,7 @@ function App() {
         <Route path="/support" element={<CustomerSupport/>} />
       </Routes>
       <ScrollToTopButton />
+      <Analytics />
     </BrowserRouter>
   );
 }
