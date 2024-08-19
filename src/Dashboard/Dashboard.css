@@ -100,17 +100,17 @@
     width: 100%;
   }
   
-  .header {
+  .dashboard-header {
     text-align: center;
     margin-bottom: 40px;
   }
   
-  .header h2 {
+  .dashboard-header h2 {
     font-size: 28px;
     color: #2c3e50;
   }
   
-  .header p {
+  .dashboard-headerp {
     font-size: 18px;
     color: #7f8c8d;
   }
