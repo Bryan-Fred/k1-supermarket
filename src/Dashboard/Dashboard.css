@@ -1,0 +1,171 @@
+.dashboard {
+    display: flex;
+    margin-top: 70px;
+    padding: 0;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color: #111427;
+    padding: 20px;
+    height: 100%;
+    position: fixed;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    color: #ecf0f1;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .sidebar ul li:hover {
+    background-color: #34495e;
+    transform: translateX(10px);
+  }
+  
+  .sidebar ul li .icon {
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar ul li.active .icon {
+    transform: rotate(90deg);
+  }
+  
+  .sidebar ul li.active {
+    background-color: #1abc9c;
+  }
+  
+  .main-content {
+    width: 100%;
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+  }
+  
+  .fade-enter {
+    opacity: 0;
+  }
+  .fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms;
+  }
+  .fade-exit {
+    opacity: 1;
+  }
+  .fade-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
+  }
+  
+  .product-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .category-section {
+    margin-bottom: 20px;
+  }
+  
+  .product-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .product-card {
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+  }
+  
+  .product-image {
+    width: 100%;
+  }
+  
+  .product-details {
+    text-align: center;
+  }
+  
+
+  .overview {
+    width: 100%;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .header h2 {
+    font-size: 28px;
+    color: #2c3e50;
+  }
+  
+  .header p {
+    font-size: 18px;
+    color: #7f8c8d;
+  }
+  
+  .metrics {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  
+  .metric {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 20%;
+  }
+  
+  .metric h3 {
+    font-size: 24px;
+    color: #2c3e50;
+  }
+  
+  .metric p {
+    font-size: 20px;
+    color: #27ae60;
+  }
+  
+  .chart, .recent-orders, .top-products, .category-performance, .customer-feedback {
+    margin-bottom: 40px;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table th, .table td {
+    border: 1px solid #ecf0f1;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .table th {
+    background-color: #34495e;
+    color: #ecf0f1;
+  }
+  
+  .table tr:nth-child(even) {
+    background-color: #ecf0f1;
+  }
+  
+  .chart, .recent-orders, .top-products, .category-performance, .customer-feedback {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  

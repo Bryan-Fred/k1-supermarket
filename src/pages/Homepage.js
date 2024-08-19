@@ -9,6 +9,7 @@ import Grains from "../components/Grains";
 import Breakfast from "../components/Breakfast";
 import Pastries from "../components/Pastries";
 import CustomerTestimonials from "../components/CustomerTestimonials";
+import HeaderPage from "../components/HeaderPage";
 import Footer from "../components/Footer";
 
 const Homepage = () => {

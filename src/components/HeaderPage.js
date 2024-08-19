@@ -54,6 +54,7 @@ const HeaderPage = ({ cartCount, products, setSearchResults }) => {
     };
   }, []);
 
+
   return (
     <div className="homepage">
       <div className="header-component">
@@ -72,11 +73,14 @@ const HeaderPage = ({ cartCount, products, setSearchResults }) => {
             <button className="search-button">search</button>
           </div>
           <div className="user-actions">
-            <a href="/login">Login</a> <a href="/signup">Register</a>
+            <a href="/login">Login</a> 
+            <a href="/signup">Register</a>
             <div className="cart">
               <span>cart</span>
               <FaUser className="user-icon" size={25} />
+              <Link to="/cart">
               <FaShoppingCart size={25} />
+              </Link>
             </div>
           </div>
         </header>
@@ -96,15 +100,18 @@ const HeaderPage = ({ cartCount, products, setSearchResults }) => {
           <a href="homepage">
             <FaHome className="sidebar-icons" /> Home
           </a>
-          <a href="/">
+          <a href="/offers">
             <FaTags className="sidebar-icons" /> Offers
           </a>
-          <a href="/">
+          <a href="/contact">
             <FaPhone className="sidebar-icons" /> Contact Us
           </a>
-          <a href="/">
+          <a href="/about">
             <FaInfoCircle className="sidebar-icons" /> About Us
           </a>
+          <a href="support">
+              <FaQuestionCircle className="sidebar-icons" /> Customer Support
+            </a>
           <div className="categories">
             <a onClick={toggleCategories} href="#">
               <FaBoxes className="sidebar-icons" /> Categories{" "}
@@ -126,9 +133,9 @@ const HeaderPage = ({ cartCount, products, setSearchResults }) => {
             <a href="/store-locator">
               <FaMapMarkerAlt className="sidebar-icons" /> Store Locator
             </a>
-            <a href="support">
+            {/* <a href="support">
               <FaQuestionCircle className="sidebar-icons" /> Customer Support
-            </a>
+            </a> */}
             <a href="/return-policy">
               <FaRedoAlt className="sidebar-icons" /> Return Policy
             </a>

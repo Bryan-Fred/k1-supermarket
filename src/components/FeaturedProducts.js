@@ -51,7 +51,6 @@ const FeaturedProducts = () => {
       </div>
       <div className="arrow-container right-arrow" onClick={() => scrollProducts('right')}>&#10095;</div>
       {modalContent && <ProductModal product={modalContent} closeModal={closeModal} />}
-      <div className="category-link">See All</div>
     </section>
   );
 };

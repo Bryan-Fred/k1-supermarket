@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Footer from '../components/Footer';
 
 const ToiletriesPage = ({ addToCart, cartCount }) => {
   const [products, setProducts] = useState([]);
@@ -58,7 +59,7 @@ const ToiletriesPage = ({ addToCart, cartCount }) => {
                   <div key={product._id} className="product-unique">
                     <img src={product.image} alt={product.name} />
                     <h3>{product.name}</h3>
-                    <p>${product.price.toFixed(2)}</p>
+                    <p>GHS {product.price.toFixed(2)}</p>
                     <button className='add-to-cart-button' onClick={() => handleAddToCart(product)}>Add to Cart</button>
                   </div>
                 ))}
@@ -83,6 +84,7 @@ const ToiletriesPage = ({ addToCart, cartCount }) => {
         )}
       </div>
       <ToastContainer className="custom-toast-container" />
+      <Footer />
     </div>
   );
 };

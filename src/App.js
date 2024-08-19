@@ -11,6 +11,12 @@ import GrainsPage from "./pages/GrainsPage";
 import FrozenFoodsPage from "./pages/FrozenFoodsPage";
 import CustomerSupport from "./pages/CustomerSupport";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import AboutPage from "./pages/AboutPage";
+import ContactUs from "./pages/ContactPage";
+import LoginPage from "./pages/LoginPage" ;
+import SignupPage from "./pages/SignupPage";
+import OffersPage from "./pages/OffersPage";
+import Dashboard from "./Dashboard/Dashboard";
 
 function App() {
   const [cart, setCart] = useState(() => {
@@ -77,6 +83,12 @@ function App() {
         <Route path="/grains" element={<GrainsPage addToCart={addToCart} cartCount={cartCount} />} />
         <Route path="/FrozenFoods" element={<FrozenFoodsPage addToCart={addToCart} cartCount={cartCount} />} />
         <Route path="/support" element={<CustomerSupport/>} />
+        <Route path="/about" element={<AboutPage/>} />
+        <Route path="/contact" element={<ContactUs/>} />
+        <Route path="/login" element={<LoginPage/>} />
+        <Route path="/signup" element={<SignupPage/>} />
+        <Route path="/offers" element={<OffersPage/>} />
+        <Route path="/dashboard" element={<Dashboard/>} />
       </Routes>
       <ScrollToTopButton />
       <Analytics />

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { FaTrash } from 'react-icons/fa';
 
 const CartPage = ({ cart, updateCartQuantity, removeFromCart, applyDiscountCode, proceedToCheckout }) => {
   const [discountCode, setDiscountCode] = useState('');
@@ -38,7 +39,6 @@ const CartPage = ({ cart, updateCartQuantity, removeFromCart, applyDiscountCode,
   return (
     <div className="cart-page">
       <div className="cart-page-unique">
-        <h2>Cart</h2>
         {cart.length === 0 ? (
           <p>Your cart is empty.</p>
         ) : (
@@ -55,7 +55,7 @@ const CartPage = ({ cart, updateCartQuantity, removeFromCart, applyDiscountCode,
                       <span>{item.quantity}</span>
                       <button onClick={() => handleQuantityChange(item._id, item.quantity + 1)}>+</button>
                     </div>
-                    <button onClick={() => removeFromCart(item._id)}>Remove</button>
+                      <FaTrash className="cart-remover" onClick={() => removeFromCart(item._id)}/>
                   </div>
                 </div>
               ))}
