@@ -13,7 +13,7 @@ const PastriesPage = ({ addToCart, cartCount }) => {
     // Fetch products from the server
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/products?category=Pastries');
+        const response = await axios.get('https://k1-backend.onrender.com/products?category=Pastries');
         setProducts(response.data);
         setLoading(false);
       } catch (error) {

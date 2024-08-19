@@ -13,7 +13,7 @@ const ToiletriesPage = ({ addToCart, cartCount }) => {
     // Fetch products from the server
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/products?category=Toiletries');
+        const response = await axios.get('https://k1-backend.onrender.com/products?category=Toiletries');
         setProducts(response.data);
         setLoading(false);
       } catch (error) {
@@ -88,4 +88,3 @@ const ToiletriesPage = ({ addToCart, cartCount }) => {
 };
 
 export default ToiletriesPage;
-  

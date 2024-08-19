@@ -11,7 +11,7 @@ const BreakfastPage = ({ addToCart }) => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/products?category=Breakfast');
+        const response = await axios.get('https://k1-backend.onrender.com/products?category=Breakfast');
         setProducts(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);
@@ -46,7 +46,7 @@ const BreakfastPage = ({ addToCart }) => {
               <h3>{product.name}</h3>
               <p>${product.price.toFixed(2)}</p>
               <button className='add-to-cart-button' onClick={() => handleAddToCart(product)}>Add to Cart</button>
-              </div>
+            </div>
           ))}
         </div>
         <div className="pagination-unique">
