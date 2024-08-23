@@ -17,6 +17,7 @@ import LoginPage from "./pages/LoginPage" ;
 import SignupPage from "./pages/SignupPage";
 import OffersPage from "./pages/OffersPage";
 import Dashboard from "./Dashboard/Dashboard";
+import CheckoutPage from "./pages/CheckoutPage";
 
 function App() {
   const [cart, setCart] = useState(() => {
@@ -89,6 +90,7 @@ function App() {
         <Route path="/signup" element={<SignupPage/>} />
         <Route path="/offers" element={<OffersPage/>} />
         <Route path="/dashboard" element={<Dashboard/>} />
+        <Route path="/checkout" element={<CheckoutPage />} />
       </Routes>
       <ScrollToTopButton />
       <Analytics />

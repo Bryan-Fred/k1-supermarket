@@ -102,7 +102,6 @@ const ContactUs = () => {
 
   return (
     <div className="contact-us">
-      <HeaderPage cartCount={cartCount} setSearchResults={setSearchResults} />
       <div className="contact-banner">
         <h1>Contact Us</h1>
       </div>

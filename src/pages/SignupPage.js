@@ -10,22 +10,56 @@ const SignupPage = () => {
   const [reenteredPassword, setReenteredPassword] = useState('');
   const [telephone, setTelephone] = useState('');
   const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
+  const [loading, setLoading] = useState(false); // Loading state
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (password !== reenteredPassword) {
       setError('Passwords do not match');
       return;
     }
-    // Add signup logic here
-    // If successful:
-    alert('Account created successfully!');
-    navigate('/Header');
-    // If error:
-    // setError('An error occurred. Please try again.');
+  
+    setLoading(true);
+  
+    try {
+      const response = await fetch('https://k1-backend.onrender.com/api/auth/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          firstName,
+          secondName,
+          email,
+          password,
+          telephone,
+        }),
+      });
+  
+      const data = await response.json();
+  
+      if (response.ok) {
+        setSuccess('Account created successfully!');
+        setError('');
+        setTimeout(() => {
+          navigate('/Homepage');
+        }, 2000);
+      } else {
+        console.error('Error:', data); // Log the error details
+        setError(data.message || 'An error occurred. Please try again.');
+        setSuccess('');
+      }
+    } catch (error) {
+      console.error('Network Error:', error); // Log network or other unexpected errors
+      setError('An error occurred. Please try again.');
+      setSuccess('');
+    } finally {
+      setLoading(false);
+    }
   };
-
+  
   return (
     <div className="signup-container">
       <img src={myLogo} alt="Logo" className='img-logo-login' />
@@ -92,8 +126,10 @@ const SignupPage = () => {
             required
           />
         </div>
+        {loading && <p className="loading">Creating account...</p>}
+        {success && <p className="success">{success}</p>}
         {error && <p className="error">{error}</p>}
-        <button type="submit">Sign Up</button>
+        <button type="submit" className="login-button">Sign Up</button>
       </form>
     </div>
   );

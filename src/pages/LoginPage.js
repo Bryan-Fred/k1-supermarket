@@ -45,7 +45,7 @@ const LoginPage = () => {
           />
         </div>
         {error && <p className="error">{error}</p>}
-        <button type="submit">Login</button>
+        <button type="submit" className="login-button">Login</button>
       </form>
       <p className="create-account-link">
         Don't have an account? <Link to="/signup">Create Account</Link>

@@ -193,7 +193,7 @@ body {
   display: none;
 }
 
-.user-actions a {
+.user-actions .user-account {
   margin: 0 10px;
   text-decoration: none;
   color: #000;
@@ -202,6 +202,12 @@ body {
 .user-actions .cart {
   display: flex;
   align-items: center;
+  width: 100%;
+}
+
+.cart-link{
+  text-decoration: none;
+  color: black;
 }
 
 .cart-count{
@@ -379,6 +385,13 @@ body {
     height: 25px;
   }
 
+  .cart div{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+
   .cart-count{
     top: 13px;
     right: 13px;
@@ -386,12 +399,11 @@ body {
 
   .user-actions{
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
-    width:20%;
   }
 
-  .user-actions a{
+  .user-actions .user-account{
     display: none;
   }
 
@@ -445,6 +457,7 @@ body {
     align-items: flex-start;
     transition: left 0.3s ease-in-out;
     z-index: 1000;
+    padding-top: 0;
   }
   
   .navbar.show {
@@ -552,7 +565,6 @@ body {
     font-size: 24px;
     cursor: pointer;
     color: white;
-    margin-bottom: 20px;
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.1); /* Adds a subtle background */
     border-radius: 50%; /* Makes the button circular */

@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { FaTrash } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
-const CartPage = ({ cart, updateCartQuantity, removeFromCart, applyDiscountCode, proceedToCheckout }) => {
+const CartPage = ({ cart, updateCartQuantity, removeFromCart, applyDiscountCode }) => {
   const [discountCode, setDiscountCode] = useState('');
   const [discountApplied, setDiscountApplied] = useState(false);
   const [discountError, setDiscountError] = useState('');
+
+  const navigate = useNavigate();
 
   const handleQuantityChange = (id, quantity) => {
     if (quantity < 1) {
@@ -25,7 +28,7 @@ const CartPage = ({ cart, updateCartQuantity, removeFromCart, applyDiscountCode,
   };
 
   const handleProceedToCheckout = () => {
-    proceedToCheckout();
+    navigate('/checkout', { state: { cart } });
   };
 
   useEffect(() => {
