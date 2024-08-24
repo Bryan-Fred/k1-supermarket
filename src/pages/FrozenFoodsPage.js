@@ -13,7 +13,7 @@ const FrozenFoodsPage = ({ addToCart, cartCount }) => {
     // Fetch products from the server
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('https://k1-backend.onrender.com/api/products?category=Toiletries');
+        const response = await axios.get('https://k1-backend.onrender.com/api/products?category=FrozenFoods');
         setProducts(response.data);
         setLoading(false);
       } catch (error) {
