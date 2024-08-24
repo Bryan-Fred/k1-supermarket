@@ -11,7 +11,7 @@ const BreakfastPage = ({ addToCart }) => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('https://k1-backend.onrender.com/products?category=Breakfast');
+        const response = await axios.get('https://k1-backend.onrender.com/api/products?category=Toiletries');
         setProducts(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);

@@ -1631,6 +1631,7 @@ h2 {
   
   .cart-item-unique {
     width: 80%;
+    border-style: groove;
   }
   
   .cart-summary-unique {

@@ -63,7 +63,7 @@ const SignupPage = () => {
   return (
     <div className="signup-container">
       <img src={myLogo} alt="Logo" className='img-logo-login' />
-      <h2>Sign Up</h2>
+      <h2 className="login-heading">Sign Up</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="fullName">Full Name</label>

@@ -75,15 +75,19 @@ const HeaderPage = ({ cartCount, products, setSearchResults }) => {
           <div className="user-actions">
             <a href="/login" className="user-account">Login</a> 
             <a href="/signup" className="user-account">Register</a>
-            <Link to="/cart" className="cart-link">
             <div className="cart">
+            <Link to="/cart" className="cart-link">
               <span>cart</span>
+              </Link>
               <div>
+              <Link to="/login" className="cart-link">
               <FaUser className="user-icon" size={25} />
+              </Link>
+              <Link to="/cart" className="cart-link">
               <FaShoppingCart size={25} />
+              </Link>
               </div>
             </div>
-            </Link>
           </div>
         </header>
         <span className="cart-count">{cartCount}</span>

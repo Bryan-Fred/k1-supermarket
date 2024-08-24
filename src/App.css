@@ -7,11 +7,16 @@
   background: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-h2 {
+.login-heading{
   text-align: center;
   color: #333;
+  font-family: serif;
 }
 
 .form-group {
@@ -304,9 +309,11 @@ body {
 }
 
 .img-logo-login {
-  width: 50px;
-  position: relative;
-  right: -175px;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  /* border: 3px solid rgb(131, 129, 129); */
+  box-shadow: 0 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* Additional styles for full name inputs in SignupPage */
@@ -632,5 +639,74 @@ body {
   .arrow-in-sidebar{
     margin-left: 90px;
   }
-  
+
+/*.signup-container,
+.login-container {
+  max-width: 400px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+.form-group input {
+  margin-bottom: 10px;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.welcome-message {
+  justify-content: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.message-to-user {
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 30px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+
+.img-logo-login {
+
+}
+*/
 }
