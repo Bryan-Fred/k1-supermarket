@@ -11,6 +11,7 @@ import Pastries from "../components/Pastries";
 import CustomerTestimonials from "../components/CustomerTestimonials";
 import HeaderPage from "../components/HeaderPage";
 import Footer from "../components/Footer";
+import CustomerReviews from "../components/CustomerReviews";
 
 const Homepage = () => {
   return (
@@ -23,7 +24,8 @@ const Homepage = () => {
         <Grains />
         <Breakfast />
         <Pastries />
-        <CustomerTestimonials />
+        {/* <CustomerTestimonials /> */}
+        <CustomerReviews/>
       </div>
       <Footer />
     </div>
