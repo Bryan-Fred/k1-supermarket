@@ -16,11 +16,21 @@
 
 /* Mobile Styles */
 @media (max-width: 600px) {
+    .reviews-section{
+        width: 100%;
+    }
+
+    .reviews-section h2{
+        font-size: 25px;
+        font-weight: bold;
+        font-family: serif;
+    }
+
     .reviews-container {
       display: flex;
       flex-direction: column;
       gap: 30px;
-      width: 80%;
+      width: 90%;
       margin: 0 auto;
     }
 
