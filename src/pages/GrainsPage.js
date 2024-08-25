@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Footer from '../components/Footer';
 
 const GrainsPage = ({ addToCart, cartCount }) => {
   const [products, setProducts] = useState([]);
@@ -42,7 +43,8 @@ const GrainsPage = ({ addToCart, cartCount }) => {
   };
 
   return (
-    <div className="main-products-pages">
+    <div>
+          <div className="main-products-pages">
       <div className="products-pages-unique">
         <h2>Grains</h2>
         {loading ? (
@@ -82,6 +84,8 @@ const GrainsPage = ({ addToCart, cartCount }) => {
         )}
       </div>
       <ToastContainer className="custom-toast-container" />
+    </div>
+    <Footer />
     </div>
   );
 };

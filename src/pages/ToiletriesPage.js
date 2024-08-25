@@ -44,7 +44,8 @@ const ToiletriesPage = ({ addToCart, cartCount }) => {
   };
 
   return (
-    <div className="main-products-pages">
+    <div>
+      <div className="main-products-pages">
       <div className="products-pages-unique">
         <h2>Toiletries</h2>
         {loading ? (
@@ -84,8 +85,10 @@ const ToiletriesPage = ({ addToCart, cartCount }) => {
         )}
       </div>
       <ToastContainer className="custom-toast-container" />
-      <Footer />
     </div>
+    <Footer />
+    </div>
+    
   );
 };
 

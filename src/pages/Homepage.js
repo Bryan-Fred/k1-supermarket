@@ -15,7 +15,7 @@ import CustomerReviews from "../components/CustomerReviews";
 
 const Homepage = () => {
   return (
-    <div>
+    <div className="homepage">
       <div className="body-content">
         <PromoSection />
         <FeaturedProducts />
