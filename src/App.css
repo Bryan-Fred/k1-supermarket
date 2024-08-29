@@ -408,6 +408,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 20%;
   }
 
   .user-actions .user-account{

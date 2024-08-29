@@ -77,9 +77,9 @@ const CustomerReviews = () => {
       }, { threshold: 0.1 });
 
       reviewRefs.forEach((review, index) => {
-        review.style.transitionDelay = `${index * 0.2}s`;
-        if (index % 3 === 0) review.classList.add('left');
-        else if (index % 3 === 1) review.classList.add('right');
+        review.style.transitionDelay = `${index * 0.1}s`;
+        if (index % 3 === 0) review.classList.add('bottom');
+        else if (index % 3 === 1) review.classList.add('bottom');
         else review.classList.add('bottom');
         observer.observe(review);
       });
