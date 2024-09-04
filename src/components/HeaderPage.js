@@ -21,6 +21,7 @@ import {
 } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 
+
 const HeaderPage = ({ cartCount, products, setSearchResults }) => {
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
   const [isCategoriesVisible, setIsCategoriesVisible] = useState(false);
