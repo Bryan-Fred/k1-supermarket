@@ -1,6 +1,6 @@
 import { Analytics } from "@vercel/analytics/react";
-import React, { useState, useEffect, useRef } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import HeaderPage from "./components/HeaderPage";
 import Homepage from "./pages/Homepage";
 import ToiletriesPage from "./pages/ToiletriesPage";
@@ -13,7 +13,7 @@ import CustomerSupport from "./pages/CustomerSupport";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import AboutPage from "./pages/AboutPage";
 import ContactUs from "./pages/ContactPage";
-import LoginPage from "./pages/LoginPage" ;
+import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import OffersPage from "./pages/OffersPage";
 import Dashboard from "./Dashboard/Dashboard";
@@ -61,7 +61,7 @@ function App() {
 
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <HeaderPage cartCount={cartCount} setSearchResults={setSearchResults} />
+      <ConditionalHeaderPage cartCount={cartCount} setSearchResults={setSearchResults} />
       <Routes>
         <Route path="/" element={<Navigate to="/homepage" />} />
         <Route path="homepage" element={<Homepage />} />
@@ -83,18 +83,29 @@ function App() {
         <Route path="/pastries" element={<PastriesPage addToCart={addToCart} cartCount={cartCount} />} />
         <Route path="/grains" element={<GrainsPage addToCart={addToCart} cartCount={cartCount} />} />
         <Route path="/FrozenFoods" element={<FrozenFoodsPage addToCart={addToCart} cartCount={cartCount} />} />
-        <Route path="/support" element={<CustomerSupport/>} />
-        <Route path="/about" element={<AboutPage/>} />
-        <Route path="/contact" element={<ContactUs/>} />
-        <Route path="/login" element={<LoginPage/>} />
-        <Route path="/signup" element={<SignupPage/>} />
-        <Route path="/offers" element={<OffersPage/>} />
-        <Route path="/dashboard" element={<Dashboard/>} />
+        <Route path="/support" element={<CustomerSupport />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/offers" element={<OffersPage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/checkout" element={<CheckoutPage />} />
       </Routes>
       <ScrollToTopButton />
       <Analytics />
     </BrowserRouter>
+  );
+}
+
+function ConditionalHeaderPage({ cartCount, setSearchResults }) {
+  const location = useLocation();
+  return (
+    <>
+      {location.pathname !== "/login" && location.pathname !== "/signup" && (
+        <HeaderPage cartCount={cartCount} setSearchResults={setSearchResults} />
+      )}
+    </>
   );
 }
 

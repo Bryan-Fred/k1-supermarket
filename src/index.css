@@ -513,7 +513,7 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-   width: 90%;
+    width: 90%;
     margin: 0 auto;
   }
   
@@ -1850,6 +1850,12 @@ h2 {
   .contact-content {
     flex-direction: column;
     width: 95%;
+  }
+
+  .add-to-cart-button{
+    height: 30px;
+    width: 70px;
+    font-size: 10px;
   }
   
   }
