@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Footer from '../components/Footer';
+import { ClipLoader } from 'react-spinners';
+import CategoryCards from '../components/CategoryCards';
 
 const FrozenFoodsPage = ({ addToCart, cartCount }) => {
   const [products, setProducts] = useState([]);
@@ -13,7 +16,7 @@ const FrozenFoodsPage = ({ addToCart, cartCount }) => {
     // Fetch products from the server
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('https://k1-backend.onrender.com/api/products?category=FrozenFoods');
+        const response = await axios.get('https://k1-backend.onrender.com/api/products?category=Frozen-Foods');
         setProducts(response.data);
         setLoading(false);
       } catch (error) {
@@ -42,11 +45,14 @@ const FrozenFoodsPage = ({ addToCart, cartCount }) => {
   };
 
   return (
+    <div>
+    <CategoryCards /> {/* Use CategoryCards component */}
     <div className="main-products-pages">
       <div className="products-pages-unique">
-        <h2>Frozen Foods</h2>
         {loading ? (
-          <p>Loading products...</p>
+          <div className="spinner-container">
+            <ClipLoader color="#36d7b7" size={60} />
+          </div>
         ) : (
           <>
             {currentProducts.length === 0 ? (
@@ -82,6 +88,8 @@ const FrozenFoodsPage = ({ addToCart, cartCount }) => {
         )}
       </div>
       <ToastContainer className="custom-toast-container" />
+    </div>
+    <Footer />
     </div>
   );
 };

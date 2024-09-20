@@ -82,7 +82,7 @@ function App() {
         <Route path="/breakfast" element={<BreakfastPage addToCart={addToCart} cartCount={cartCount} />} />
         <Route path="/pastries" element={<PastriesPage addToCart={addToCart} cartCount={cartCount} />} />
         <Route path="/grains" element={<GrainsPage addToCart={addToCart} cartCount={cartCount} />} />
-        <Route path="/FrozenFoods" element={<FrozenFoodsPage addToCart={addToCart} cartCount={cartCount} />} />
+        <Route path="/frozen-foods" element={<FrozenFoodsPage addToCart={addToCart} cartCount={cartCount} />} />
         <Route path="/support" element={<CustomerSupport />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactUs />} />

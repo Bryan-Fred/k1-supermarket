@@ -3,6 +3,8 @@ import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from '../components/Footer';
+import { ClipLoader } from 'react-spinners';
+import CategoryCards from '../components/CategoryCards';
 
 const PastriesPage = ({ addToCart, cartCount }) => {
   const [products, setProducts] = useState([]);
@@ -44,13 +46,15 @@ const PastriesPage = ({ addToCart, cartCount }) => {
 
   return (
     <div>
+      <CategoryCards />
     <div className="main-products-pages">
       <div className="products-pages-unique">
-        <h2>Pastries</h2>
-        {loading ? (
-          <p>Loading products...</p>
-        ) : (
-          <>
+      {loading ? (
+            <div className="spinner-container">
+              <ClipLoader color="#36d7b7" size={60} />
+            </div>
+          ) : (
+            <>
             {currentProducts.length === 0 ? (
               <p>No products available.</p>
             ) : (
